@@ -1,0 +1,13 @@
+
+<<<1>>>	create database student_project;
+	
+<<<2>>>	use student_project;
+
+<<<3>>>	create student STUDENT_NO varchar(3) PRIMARYKEY,STUDENT_NAME varchar(10),STUDENT_DOB DATE,STUDENT_DOJ DATE;
+
+<<<4>>> create project PRJ_NO varchar(3) PRIMARYKEY , PRJ_NAME varchar(15) ,PRJ_DUR int, PRJ_PLATFORM varchar(10);
+
+<<<5>>> create table student_project( STUDENT_NO varchar(3), PRJ_NO varchar(3), DESIGNATION varchar(10), 
+	primary key (STUDENT_NO, PRJ_NO,DESIGNATION), 
+	foreign key (STUDENT_NO) references student (STUDENT_NO), 
+	foreign key (PRJ_NO) references project (PRJ_NO));
